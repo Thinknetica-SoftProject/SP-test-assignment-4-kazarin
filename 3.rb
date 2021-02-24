@@ -10,4 +10,6 @@
 #
 ## Решение:
 
+raw = File.read('data/3.txt').strip
 
+puts raw.split("\n").map { |row| row.split("\t").map(&:to_i) }.map { |row| row.max - row.min }.reduce(:+)
