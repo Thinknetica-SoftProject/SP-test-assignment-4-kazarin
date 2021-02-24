@@ -16,6 +16,5 @@
 #
 ## Решение:
 
-
-
-
+raw = File.read('data/1.txt').strip
+puts raw.split("").map { |token| token == '(' ? 1 : -1 }.reduce(:+)
